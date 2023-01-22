@@ -9,7 +9,7 @@
     </script>
 </html>
 ```
-![img1](img/img1.PNG) 
+
 
 ## Clase 2: Mostrar una linea de texto coloreado
 ```html
@@ -25,7 +25,7 @@
 
 </html>
 ```
-![img2](img/img2.PNG) 
+
 
 ## Clase 3: Mostrar una texto en un dialogo de alerta
 ```html
@@ -43,4 +43,153 @@
     </body>
 </html>
 ```
-![img3](img/img3.PNG) 
+
+
+## Clase 4: Pagina de Bienvenidad Dinámica, comando Prompt
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Cuadros Prompt</title>
+    <script>
+        var nombre;// cadena introducida por el usuario
+        // lee el cuadro prompt como una cadena
+        nombre = window.prompt("Escriba su nombre");
+        document.writeln("<h1>Hola "+ nombre +", bienvenidoa a la proramación ; en JavaScript</h1>");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+```
+
+
+## Clase 5: Suma de enteros, conversión a enteros
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un programa de suma</title>
+    <script>
+        var primerNumero; // primera cadena introducida por el usuario
+        var segundoNumero; // segunda cadena introducida por el usuario
+        var numero1; // primer numero a sumar
+        var numero2; // segundo numero a sumar
+        var suma; // suma de numero1 y numero 2
+
+        // lee el primer número del susuario como una cadena
+        primerNumero =window.prompt("Escriba el primer número");
+
+        // lee el segundo número del susuario como una cadena
+        segundoNumero =window.prompt("Escriba el segundo número");
+
+        // convierte los npumeros de cadenas a enteros
+
+        numero1 = parseInt(primerNumero);
+        numero2 = parseInt(segundoNumero);
+
+        suma = numero1 +numero2; // suma de enteros
+        //muestra ñlos resultados
+
+        document.writeln("<h1>La suma es: "+ suma +"</h1>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+```
+
+
+
+## Clase 6: if and else, date
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de operadores racionales</title>
+    <script>
+        var nombre; // cadena introducida por el usuario
+        var ahora = new Date(); // Fecha y hora actuales
+        var hora = ahora.getHours(); // hora actual(0-23)
+        
+        //lee el nombre del cuadro indicador como una cadena
+        nombre = window.prompt("Escriba su nombre");
+
+        // determina si es mañana
+        if (hora<12) {
+            document.write("<h1>Buenos días ");
+        }
+
+        //determina si es la hora PM
+        if (hora>=12) {
+            //convierte el reloj de 12 horas
+            hora = hora - 12;
+
+            //determina si es antes de las 6 pm
+
+            if ( hora < 6) {
+                document.write("<h1>Buenas tardes ");
+            }else{
+                document.write("<h1>Buenas Noches ");
+            }
+
+        }
+
+        document.writeln(nombre+", bienvenido a la programación en javascript");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+```
+## Clase 7: Instrucción de repetición de while
+While significa mientras, lo que nos da entender MIENTRAS si se cumple una determinada condición se hace la instrucción.
+```js
+var producto = 2;
+while (producto <=1000)
+    producto = 2*producto;
+```
+
+## Clase 8: Promedio de calificaciones con while
+In this problem use while repeating structure, window.prompt and parseInt.
+
+```html
+<title>Programa del promedio de una clase</title>
+    <script>
+        var total=0;
+        var contador=1;
+        
+        while (calificacion!=-1) {
+                        
+            calificacion =parseInt(window.prompt("Ingrese la siguiente calificación"));
+
+            total=total+calificacion;
+            
+            contador+=1;
+            
+        }
+
+        var promedio = total/10;
+        document.writeln("<h1>El promedio de la clase es: "+ promedio+"</h1>");
+
+    </script>
+```
