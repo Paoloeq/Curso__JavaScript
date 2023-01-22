@@ -193,3 +193,31 @@ In this problem use while repeating structure, window.prompt and parseInt.
 
     </script>
 ```
+
+## Clase 9: Promedio de notas (while, if else, centinela -1)
+Aqui se utiliza una repetición controlada por centinela, es decir Mientras las calificaciones no sean -1, el programa sigue iterando. 
+
+```js
+var total=0;
+var contador=0;
+var calificacion;
+var promedio;
+
+calificacion = parseInt( window.prompt("Ingrese una calificación entera, -1 para salir","0"));
+
+while (calificacion!=-1) {
+    total=total+calificacion;   
+    contador+=1; 
+
+    calificacion =parseInt(window.prompt("Ingrese la siguiente calificación, -1 para salir"));
+            
+}
+        
+if (contador != 0) {
+    promedio = total/contador;
+    document.writeln("<h1>El promedio de la clase es: "+ promedio+"</h1>");
+}else{
+    document.writeln("<h1>No se introdujeron calificaciones");
+}
+
+```
