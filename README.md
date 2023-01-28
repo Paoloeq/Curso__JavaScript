@@ -225,31 +225,65 @@ if (contador != 0) {
 ## Clase 10: Promedio de notas aprobados y desaprobados
 Utilizando la estructura while 
 ```js
-        var contadorAprobados =0;
-        var contadorReprobados =0;
-        var nota=0;
-        var sumaAprobados=0;
-        var sumaReprobados=0;
-        var totalAlmunos=0;
-        var promedio=0;
+var contadorAprobados =0;
+var contadorReprobados =0;
+var nota=0;
+var sumaAprobados=0;
+var sumaReprobados=0;
+var totalAlmunos=0;
+var promedio=0;
         
-        while (nota!=-1){
-            nota = parseInt(window.prompt("Ingrese una calificación entera, -1 para salir"));
+while (nota!=-1){
+    nota = parseInt(window.prompt("Ingrese una calificación entera, -1 para salir"));
 
-            if(nota<=10){
-                sumaAprobados+=nota;
-                contadorAprobados+=1;
-            }else{
-                sumaReprobados+=nota;
-                contadorReprobados+=1;
-            }
+    if(nota<=10){
+        sumaAprobados+=nota;
+        contadorAprobados+=1;
+    }else{
+        sumaReprobados+=nota;
+        contadorReprobados+=1;
         }
+}
 
-        totalAlmunos=contadorAprobados+contadorReprobados;
-        promedio=(sumaAprobados+sumaReprobados)/totalAlmunos;
+totalAlmunos=contadorAprobados+contadorReprobados;
+promedio=(sumaAprobados+sumaReprobados)/totalAlmunos;
 
-        document.writeln("<h1>El numero de aprobados es:"+ contadorAprobados+ "</h1>")
-        document.writeln("<h1>El numero de reprobados es:"+ contadorReprobados+ "</h1>")
-        document.writeln("<h1>El total de alumnos es:"+ totalAlmunos+ "</h1>")
-        document.writeln("<h1>El promedio de notas de todos los alumnos es: "+ promedio+"</h1>")
+document.writeln("<h1>El numero de aprobados es:"+ contadorAprobados+ "</h1>")
+document.writeln("<h1>El numero de reprobados es:"+ contadorReprobados+ "</h1>")
+document.writeln("<h1>El total de alumnos es:"+ totalAlmunos+ "</h1>")
+document.writeln("<h1>El promedio de notas de todos los alumnos es: "+ promedio+"</h1>")
+
+```
+
+## Clase 11: Preincremento y PostIncremento
+```js
+var c;
+c=5;
+document.writeln("<h3>PostIncremento</h3>");
+
+// imprime 5;
+document.writeln("<p>"+c);
+//imprime 5 luego incrementa;
+document.writeln(" "+ c++);
+// incrementa luego imprime 7;
+document.writeln(" "+ ++c);
+// imprime 7
+        
+document.writeln(" " + c + "</p>");
+//c++ imprime - incrementa
+//++c incrementa - imprime
+//c-- imprime - disminuye
+//--c disminuye - imprime
+
+// numeros consecutivos
+        
+var num;
+num =0;
+document.writeln("<h1>Hola mundo</h1>");   
+        
+while(num!=21){
+    document.write("<p>" + ++num + "</p>");
+}
+        
+        
 ```
