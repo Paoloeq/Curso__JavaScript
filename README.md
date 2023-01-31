@@ -287,3 +287,77 @@ while(num!=21){
         
         
 ```
+
+## Clase 12: Repetición controlada por contador
+```js
+var contador =1;
+while(contador<=7)
+{
+    document.writeln("<p style = 'font-size: " + contador +"ex'>Tamaño de fuente de html5 " + contador + "ex</p>");
+    ++contador;
+
+}
+```
+## Clase 13: Estructura repetitiva For
+
+### Ejemplo de esta estructura
+```js
+for (var contador =1; contador <= 7; ++contador)
+{
+    document.writeln("<p style = 'font-size: " + contador +"ex'>Tamaño de fuente de html5 " + contador + "ex</p>");
+    
+}
+```
+
+### Formas de la estructura for 
+```js
+// Modificar la variable de control de  1 a 100 en incrementos de 1
+for( var i = 1; i<=100; ++i ){}
+
+// Modificar la variable de control de  100 a 1 en incrementos de -1 (decrementos de 1)
+for( var i = 100; i>=1; --i ){}
+
+// Modificar la variable de control de 7 a 77 en incrementos de 7
+for( var i = 7; i<=77; i += 7 ){}
+
+// Modificar la variable de control de  20 a 2 en incrementos de -2
+for( var i = 20; i>=2; i -= 2 ){}
+```
+
+### Suma de enteros con una instrucción For
+```js
+var suma=0;
+for( var numero =2 ;numero<=100 ; numero+=2 ){
+    suma+=numero;
+}
+
+document.writeln("La suma de los enteros pares " + "del 2 al 100 es " + suma);
+
+```
+
+### Calculo de interés compuesto
+
+```js
+var monto;
+var principal=1000.00;
+var tasa=0.05;
+
+document.writeln("<table>");
+document.writeln("<Caption>Cálculo del interés compuesto</caption>");
+document.writeln("<thead> <tr> <th>Año</th> ");
+            document.writeln("<th>Monto de Depósito</th>");
+        document.writeln("<tr> </thead><tbody>");
+
+for (var anio=1;anio <=10;++anio){
+    monto =principal*Math.pow(1.0+tasa,anio);
+
+    if (anio % 2!==0) {
+        document.writeln("<tr class='filaimpar'><td>"+anio+"</td><td>"+monto.toFixed(2)+"</td></tr>");
+    }else{
+        document.writeln("<tr><td>"+anio+"</td><td>"+monto.toFixed(2)+"</td></tr>");
+    }
+}
+
+document.writeln("</tbody></table>");
+
+```
